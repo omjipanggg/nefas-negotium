@@ -1,0 +1,59 @@
+.cb {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cb input {
+  display: none;
+}
+
+.cb .box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #cfd3d8;
+  background: #fff;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cb .box::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #cfd3d8;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.cb input:hover + .box {
+  border-color: #9aa4b2;
+}
+
+.cb input:hover + .box::after {
+  opacity: .5;
+}
+
+.cb input:checked + .box {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.cb input:checked + .box::after {
+  color: #fff;
+  opacity: 1;
+}
+
+.cb input:disabled + .box {
+  background: #f1f3f5;
+  border-color: #e2e6ea;
+}
+
+.cb input:disabled + .box::after {
+  color: #adb5bd;
+  opacity: 0.5;
+}

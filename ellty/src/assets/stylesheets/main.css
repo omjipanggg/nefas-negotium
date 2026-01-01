@@ -1,0 +1,32 @@
+:root {
+  --color-btn-primary: #ffd43b;
+  --color-btn-primary-hover: #ffca2c;
+  --color-btn-primary-disabled: #e5e7eb;
+  --color-modal-background: #ffffff;
+  --color-background: #f2f2f2;
+  --color-text: #333333;
+}
+
+html[data-theme="dark"] {
+  --color-modal-background: #273045;
+  --color-background: #0f172a;
+  --color-text: #e5e7eb;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Inter', 'Arial', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.outlined *,
+body.outlined *::before,
+body.outlined *::after {
+  outline: 1px solid red;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}

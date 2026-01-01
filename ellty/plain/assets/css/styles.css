@@ -1,6 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: Arial, system-ui, sans-serif;
+  font-family: 'Inter', 'Arial', system-ui, sans-serif;
 }
 
 body.outlined *,
@@ -11,6 +11,7 @@ body.outlined *::after {
 
 body {
   margin: 0;
+  padding: 0;
   background: #f2f2f2;
 }
 
@@ -24,33 +25,34 @@ body {
 .modal {
   width: 360px;
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.125);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.125);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.125);
 }
 
 .list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 4px;
+  padding: 8px;
   font-size: 14px;
   color: #333;
   cursor: pointer;
 }
 
 .list-item.header {
-  font-weight: 500;
+  /*font-weight: 500;*/
 }
 
 .divider {
   height: 1px;
-  background: #e6e6e6;
+  background: #c8c8c8;
   margin: 8px 0;
 }
 
 .list {
-  margin-bottom: 16px;
 }
 
 input[type="checkbox"] {
@@ -64,12 +66,20 @@ input[type="checkbox"] {
   height: 44px;
   background: #ffd233;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 14px;
-  font-weight: 500;
   cursor: pointer;
+}
+
+.btn-modal {
+  margin-top: 10px;
 }
 
 .btn-primary:hover {
   background: #f5c400;
+}
+
+.btn-primary:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
 }
